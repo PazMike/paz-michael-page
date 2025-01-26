@@ -1,0 +1,28 @@
+/* External CSS Styles */
+
+/* The body element style will change the background color and text color */
+body {
+    background-color: #f3eeee;
+    color: #222;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* The class 'center-text' aligns text to the center */
+.center-text {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* ID style for #special will make text bold and red */
+#special {
+    font-weight: bold;
+    color: rgb(0, 170, 255);
+}
+
+/* Additional styles you may want to add */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #5e5d5d;
+    color: white;
+}
