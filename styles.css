@@ -1,28 +1,36 @@
 /* External CSS Styles */
 
-/* The body element style will change the background color and text color */
-body {
-    background-color: #f3eeee;
-    color: #222;
-    font-family: 'Times New Roman', Times, serif;
-}
 
-/* The class 'center-text' aligns text to the center */
-.center-text {
+/*Included at least one rule in my code*/
+
+@media screen and (max-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+/* The above code would turn the background lightgreen for anyone using a device larger than 480px wide. */
+
+
+/*both the 1 class and 1 ID will each be applied to 2 elements in index.htm*\
+
+/* The class 'format' will clearly show where the formating has been applied to*/
+/* The class CSS Styles have been applied to h1 and p in index.htm*/
+.format {
     text-align: center;
-    font-size: 20px;
-}
-
-/* ID style for #special will make text bold and red */
-#special {
-    font-weight: bold;
-    color: rgb(0, 170, 255);
-}
-
-/* Additional styles you may want to add */
-footer {
-    text-align: center;
-    padding: 10px;
+    font-size: 25px;
     background-color: #5e5d5d;
-    color: white;
+    padding: 10px;
+    color: aqua;
 }
+
+/* ID style for #custom will clearly show on the index.htm page*/
+/* The ID CSS Styles have been applied to section and footer in index.htm*/
+#custom {
+    font-weight: bold;
+    text-align: center;
+    background-color: #5e5d5d;
+    padding: 10px;
+    font-size: 25px;
+    color:whitesmoke;
+}
+
