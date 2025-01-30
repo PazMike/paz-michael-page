@@ -1,68 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="styles.css">
-<title>About Michael Paz page</title>
+<link rel="stylesheet" href="styler.css">
+<title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 
 <body>
 
-	<!--Link to CSS page -->
-	<p>This is the link to the second HTML page</p>
-	<a href="second.htm">CSS page link</a>
-	<!-- Page Introduction -->
-	<!--This is where the class style was applied to 2 elements h1 and p-->
-	<header>
-		
-		<h1 class="format">Information about Michael Paz</h1>
-		<p class="format">Find out more about me below.</p>
-		
-	</header>
+	<!-- Navigation Bar -->
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About US</a>
+        <a href="contact.html">Contact US</a>
+        <a href="services.html">Services</a>
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="content">
+        <!-- Page Introduction -->
+		<h1>Paz2Focus</h1>
+        <h1 id="header">Official website of Michael Paz's photography</h1>
+        <button id="myButton">Click to learn more about pricing</button>
 
-	<!-- About Section -->
-	<!--This is where ID style was applied to the section-->
-	<section id="custom">
-		<h2>Where I'm from:</h2>
-		<p>I am from all over the US. My family is stationed at Langley AFB Virginia.</p>
+    </div>
 
-		<h2>My major and current year:</h2>
-		<p>I am a senior and a cybersecurity major.</p>
+    
+        <script>
+            // message
+            let pricing = "You clicked to see Pricing";
+    
+            // Get the button element by its ID
+            let button = document.getElementById("myButton");
+    
+            // Get the header element by its ID
+            let header = document.getElementById("header");
+    
+            // (Event Listener) button that triggers an alert when clicked
+            button.addEventListener("click", function() {
+                // Show an alert when the button is clicked
+                alert(pricing);
+                
+                // (JS Styling)  Change the style of the header text when the button is clicked
+                header.style.color = "blue";
+                header.style.fontSize = "2em";
+            });
+        </script>
 
-		<h2>Interesting Information about me:</h2>
-		<p>My dad is in the airforce so we have lived in more than 5 different states. I was also born overseas on an island owned by Portugal called Azores.</p>
-
-		<h2>My idea for a website I will build in this class throughout the semester:</h2>
-		<p>I am thinking about a photography website called "Paz2Focus". The website will have family photos, graduation photos, single photos, wedding photos and more.</p>
-	</section>
-
-
-	<!-- Contact Form 2 input fields and a submit button -->
-		<h2>Now that you have met me, you should introduce yourself by filling out the form below</h2>
-		<form>
-			<label for="first-name">First Name:</label>
-			<input type="text" id="first-name" name="first-name" required><br><br>
-
-			<label for="last-name">Last Name:</label>
-			<input type="text" id="last-name" name="last-name" required><br><br>
-
-			<input type="submit" value="Submit">
-
-		</form>
-
-	<!-- Useful external link -->
-		<h2>Useful link to W3Schools.com</h2>
-		<a href="https://www.w3schools.com/html/default.asp"
-		target="_blank">W3Schools</a>
-
-
-	<!-- Footer -->
-	<!--This is where ID style was applied to the footer-->
-	<footer id="custom">
-		<p>This web page was created by Michael Paz.</p>
-	</footer>
-
+	    <!-- Footer -->
+        <footer>
+            <p>Paz2Focus web page was created by Michael Paz.</p>
+            <p>&copy; 2025 Photography Website. All rights reserved.</p>
+        </footer>
+    
 	
 </body>
 </html>
-
