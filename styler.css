@@ -12,10 +12,25 @@
     nav a {
       float: none; 
       width: 100%;
-      text-align: left;
+      text-align: center;
     }
 }
 /* Stack links vertically on smaller screens */
+
+/* Styling for the response box: So that the user can see where the message is without being clutered*/
+.response-box {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.response-box p {
+  font-size: 16px;
+  color: #333;
+}
 
 
 
@@ -137,3 +152,32 @@ body {
     padding: 20px;
     margin-top: 40px;
   }
+
+  /* Styling for the .content class */
+/* General styling for the body and header */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* No need for flexbox here anymore */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* General styling for .content */
+.content {
+  max-width: 800px; /* Limit width of content */
+  width: 80%; /* Set content width */
+  padding: 30px; /* Add padding around content */
+  background-color: white; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for styling */
+  margin: 40px auto; /* Center the content horizontally and give top and bottom margin */
+  text-align: center; /* Center the text inside the content */
+}
