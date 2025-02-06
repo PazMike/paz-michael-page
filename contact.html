@@ -2,72 +2,57 @@
 <html>
 <head>
 <link rel="stylesheet" href="styler.css">
-<title>Contact Me</title>
+<title>Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 
 <body>
-    <!-- Navigation Bar -->
+
+	<!-- Navigation Bar -->
     <nav>
-   
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About US</a>
-        <a href="contact.html" class="active">Contact Me</a>
+        <a href="contact.html">Contact US</a>
         <a href="services.html">Services</a>
     </nav>
     
-      <!-- Contact Section -->
-      <section class="contact-section">
-        <h2>Contact Me</h2>
-        <p>If you have any questions, want to book a session, reach out by filling out the form below!</p>
-        
-        <!-- Contact Form that will gather the User Data: User name, age, email, and message-->
-        <!--The input fields for the attributes of label are equal to the id attribute-->
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="full-name">Full Name:</label>
-            <input type="text" id="full-name" name="full-name" required>
-          </div>
+    <!-- Page Content -->
+    <div class="content">
+        <!-- Page Introduction -->
+		<h1>Paz2Focus</h1>
+        <h1 id="header">Official website of Michael Paz's photography</h1>
+        <button id="myButton">Click to learn more about pricing</button>
+    </div>
 
-          <div class="form-group">
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
-          </div>
     
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
+        <script>
+            //THIS is the use of a Variable 
+            // message
+            let pricing = "You clicked to see Pricing";
     
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
+            // Get the button element by its ID
+            let button = document.getElementById("myButton");
     
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-
-        <!-- Dynamic Output for Fun Interaction -->
-          <!-- This is the Response Box -->
-          <div id="response-box" class="response-box"></div>
-
-         <!-- Additional Contact Info (optional) -->
-      <div class="contact-info">
-        <h3>Other Ways to Reach Me:</h3>
-        <p>Phone: (707) 438-8999</p>
-        <p>Email: mapaz1@liberty.edu</p>
-        <p>Location: 123 East Campus Bldg123, Lynchburg, VA</p>
-      </div>
-      </section>
-
-      <!-- Link to external JavaScript file -->
-      <script src="proj2.js"></script>
-
-      <!-- Footer -->
-      <footer>
-        <p>Paz2Focus web page was created by Michael Paz.</p>
-        <p>&copy; 2025 Photography Website. All rights reserved.</p>
-      </footer>
+            // Get the header element by its ID
+            let header = document.getElementById("header");
     
+            // (Event Listener) button that triggers an alert when clicked
+            button.addEventListener("click", function() {
+                // Show an alert when the button is clicked
+                alert(pricing);
+                
+                // (JS Styling)  Change the style of the header text when the button is clicked
+                header.style.color = "blue";
+                header.style.fontSize = "2em";
+            });
+        </script>
+
+	    <!-- Footer -->
+        <footer>
+            <p>Paz2Focus web page was created by Michael Paz.</p>
+            <p>&copy; 2025 Photography Website. All rights reserved.</p>
+        </footer>
+    
+	
 </body>
 </html>
