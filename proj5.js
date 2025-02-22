@@ -4,7 +4,7 @@
 const galleryData = {
     homePage: [
         { src: 'https://raw.githubusercontent.com/PazMike/paz-michael-page/refs/heads/main/MaleSinglePhoto.jpg', alt: 'Male Single Photo' },
-        { src: 'images/FemaleGraduation.jpg', alt: 'Graduation Photo' },
+        { src: 'https://raw.githubusercontent.com/PazMike/paz-michael-page/refs/heads/main/FemaleGraduation.jpg', alt: 'Graduation Photo' },
         { src: 'images/familySunsetpic.jpg', alt: 'Family Photo' },
         { src: 'images/Weddingpic.jpg', alt: 'Wedding Photo' }
     ],
