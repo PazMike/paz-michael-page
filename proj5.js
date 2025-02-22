@@ -3,7 +3,7 @@
 // Array of image sources for different galleries (Page-based)
 const galleryData = {
     homePage: [
-        { src: 'https://github.com/PazMike/paz-michael-page/blob/main/MaleSinglePhoto.jpg', alt: 'Male Single Photo' },
+        { src: 'MaleSinglePhoto.jpg', alt: 'Male Single Photo' },
         { src: 'images/FemaleGraduation.jpg', alt: 'Graduation Photo' },
         { src: 'images/familySunsetpic.jpg', alt: 'Family Photo' },
         { src: 'images/Weddingpic.jpg', alt: 'Wedding Photo' }
