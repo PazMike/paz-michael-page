@@ -3,21 +3,21 @@
 // Array of image sources for different galleries (Page-based)
 const galleryData = {
     homePage: [
-        { src: 'https://raw.githubusercontent.com/PazMike/paz-michael-page/refs/heads/main/MaleSinglePhoto.jpg', alt: 'Male Single Photo' },
-        { src: 'https://raw.githubusercontent.com/PazMike/paz-michael-page/refs/heads/main/FemaleGraduation.jpg', alt: 'Graduation Photo' },
-        { src: 'https://raw.githubusercontent.com/PazMike/paz-michael-page/refs/heads/main/familySunsetpic.jpg', alt: 'Family Photo' },
-        { src: 'https://raw.githubusercontent.com/PazMike/paz-michael-page/refs/heads/main/WeddingPic.jpg', alt: 'Wedding Photo' }
+        { src: 'malesinglepic.jpg', alt: 'Male Single Photo' },
+        { src: 'femalegrad.jpg', alt: 'Graduation Photo' },
+        { src: 'familypic.jpg', alt: 'Family Photo' },
+        { src: 'weddingpic.jpg', alt: 'Wedding Photo' }
     ],
     aboutPage: [
-        { src: 'https://raw.githubusercontent.com/PazMike/paz-michael-page/refs/heads/main/aboutPage.jpg', alt: 'About' },
+        { src: 'aboutpic.jpg', alt: 'About' },
        
     ],
     servicesPage: [
-        { src: 'https://raw.githubusercontent.com/PazMike/paz-michael-page/refs/heads/main/servicesPage.jpg', alt: 'Services' },
+        { src: 'servicespic.jpg', alt: 'Services' },
        
     ],
     contactPage: [
-        { src: 'https://raw.githubusercontent.com/PazMike/paz-michael-page/refs/heads/main/contactPage.jpg', alt: 'Contact' },
+        { src: 'contactpic.jpg', alt: 'Contact' },
 
     ]
 };
