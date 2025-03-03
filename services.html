@@ -11,22 +11,74 @@
 
     <!-- Navigation Bar -->
     <nav>
- 
         <a href="index.html">Home</a>
         <a href="about.html">About US</a>
         <a href="contact.html">Contact US</a>
         <a href="services.html" class="active">Services</a>
     </nav>
 
+    <header>
+        <h1>Welcome to Our Services</h1>
+    </header>
+
+
     <section class="Photo Gallery">
         
         <!-- Placeholder for dynamically generated gallery -->
         <div id="photo-gallery"></div>
-        </section>
+    </section>
 
-    <!--Here is the Link to external Javascript file-->
+    <div class="content">
+    <h2>Register for Our Services</h2>
+
+   <!-- Registration Form -->
+   
+   <form id="registration-form">
+
+    <!-- Full Name -->
+    <label for="full-name">Full Name:</label>
+    <input type="text" id="full-name" name="full-name" required>
+    
+    <!-- Username -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <!-- Password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <!-- Confirm Password -->
+    <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" name="confirm-password" required>
+    
+    <!-- Phone Number -->
+    <label for="phone-number">Phone Number:</label>
+    <input type="text" id="phone-number" name="phone-number" required>
+    
+    <!-- Date of Birth -->
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+    
+    <!-- Terms and Conditions -->
+    <label for="terms">Agree to Terms</label>
+    <input type="checkbox" id="terms" name="terms" required>
+    
+    <!-- Error Messages -->
+    <ul id="error-messages"></ul> <!-- Error messages will be displayed here -->
+
+    <button type="submit">Submit</button>
+
+</form>
+
+    </div>
+
+    <!--Here is the Links to external Javascript file-->
     <script src="proj5.js"></script>
-
+    <script src="proj6.js"></script>
 
     <!-- Footer -->
     <footer>
