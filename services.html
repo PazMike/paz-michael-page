@@ -36,35 +36,35 @@
    <form id="registration-form">
 
     <!-- Full Name -->
-    <label for="full-name">Full Name:</label>
+    <label for="full-name">Full Name: A non-empty string (no numbers or special characters).</label>
     <input type="text" id="full-name" name="full-name" required>
     
     <!-- Username -->
-    <label for="username">Username:</label>
+    <label for="username">Username: Must be between 6 and 15 characters long, containing only alphanumeric characters (letters and numbers), and it cannot start with a number.</label>
     <input type="text" id="username" name="username" required>
     
     <!-- Email -->
-    <label for="email">Email:</label>
+    <label for="email">Email: Must be a valid email format (e.g., user@example.com).</label>
     <input type="email" id="email" name="email" required>
     
     <!-- Password -->
-    <label for="password">Password:</label>
+    <label for="password">Password: Must be between 8 and 20 characters, containing at least one uppercase letter, one lowercase letter, one digit, and one special character (!@#$%^&*).</label>
     <input type="password" id="password" name="password" required>
     
     <!-- Confirm Password -->
-    <label for="confirm-password">Confirm Password:</label>
+    <label for="confirm-password">Confirm Password: Must match the password exactly.</label>
     <input type="password" id="confirm-password" name="confirm-password" required>
     
     <!-- Phone Number -->
-    <label for="phone-number">Phone Number:</label>
+    <label for="phone-number">Phone Number: Must be a valid phone number format (e.g., 123-456-7890).</label>
     <input type="text" id="phone-number" name="phone-number" required>
     
     <!-- Date of Birth -->
-    <label for="dob">Date of Birth:</label>
+    <label for="dob">Date of Birth: The user must be at least 18 years old.</label>
     <input type="date" id="dob" name="dob" required>
     
     <!-- Terms and Conditions -->
-    <label for="terms">Agree to Terms</label>
+    <label for="terms">Agree to Terms: The user must check the box to agree to terms and conditions.</label>
     <input type="checkbox" id="terms" name="terms" required>
     
     <!-- Error Messages -->
