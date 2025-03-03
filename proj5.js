@@ -1,23 +1,22 @@
 
-
 // Array of image sources for different galleries (Page-based)
 const galleryData = {
     homePage: [
-        { src: 'malesinglepic.jpg', alt: 'Male Single Photo' },
-        { src: 'femalegrad.jpg', alt: 'Graduation Photo' },
-        { src: 'familypic.jpg', alt: 'Family Photo' },
-        { src: 'weddingpic.jpg', alt: 'Wedding Photo' }
+        { src: 'images/malesingle.jpg', alt: 'Male Single Photo' },
+        { src: 'images/femalegrad.jpg', alt: 'Graduation Photo' },
+        { src: 'images/familypic.jpg', alt: 'Family Photo' },
+        { src: 'images/marriagepic.jpg', alt: 'Wedding Photo' }
     ],
     aboutPage: [
-        { src: 'aboutpic.jpg', alt: 'About' },
+        { src: 'images/aboutpic.jpg', alt: 'About' },
        
     ],
     servicesPage: [
-        { src: 'servicespic.jpg', alt: 'Services' },
+        { src: 'images/servicepic.jpg', alt: 'Services' },
        
     ],
     contactPage: [
-        { src: 'contactpic.jpg', alt: 'Contact' },
+        { src: 'images/contactpic.jpg', alt: 'Contact' },
 
     ]
 };
