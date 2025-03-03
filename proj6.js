@@ -1,6 +1,6 @@
 document.getElementById('registration-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting
-
+//this is the update
     // Clear previous error messages
     const errorMessages = document.getElementById('error-messages');
     errorMessages.innerHTML = '';  // Clear the error messages section
