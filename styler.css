@@ -16,6 +16,15 @@
     }
 }
 
+/*  Styling the Error Message   */
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
 /* Gallery and Image Overlay Styles */
 
 /* Overlay container styles */
