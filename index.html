@@ -34,7 +34,46 @@
 
     </div>
 
-    <!--Here is the Link to external Javascript file-->
+    <div class = "content">
+    <!-- Interactive Form with Selections, Validation, and File Upload -->
+    <h1>Fill out what type of pictures you like, so we get to know more about you!</h1>
+
+<!-- Form to collect user input -->
+<form id="user-form">
+    <h2>Choose Your Options:</h2>
+    <label for="single photo">
+        <input type="checkbox" class="option-checkbox" value="single photo"> Single Photos
+    </label><br>
+
+    <label for="event photos">
+        <input type="checkbox" class="option-checkbox" value="event photos"> Event Photos (graduation, Wedding, Promotion ceremony, Retirement, etc...)
+    </label><br>
+
+    <label for="family photo">
+        <input type="checkbox" class="option-checkbox" value="family photo"> Family Photos
+    </label><br>
+
+    <h2>Enter Phone Number of your account:</h2>
+    <input type="text" id="phone-number" placeholder="Enter phone number (digits only)" required><br>
+
+    <h2>Upload a Text File:</h2>
+    <input type="file" id="file-upload" accept=".txt"><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Your Selections:</h2>
+<div id="selections-output"></div>
+
+<h2>File Contents:</h2>
+<div id="file-output"></div>
+
+</div>
+
+
+
+<!--Here is the Link to external Javascript file-->
+    <script src="proj7.js"></script>
     <script src="proj5.js"></script>
        
 	    <!-- Footer -->
