@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styler.css">
+<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+
+<body id="homePage">
+
+
+	<!-- Navigation Bar -->
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About US</a>
+        <a href="contact.html">Contact US</a>
+        <a href="services.html">Services</a>
+    </nav>
+    
+    <!-- Page Content -->
+    <div class="content">
+        <!-- Page Introduction -->
+		<h1>Paz2Focus</h1>
+        <h1 id="header">Official website of Michael Paz's photography</h1>
+
+        <!-- Photo Gallery Section -->
+        <section class="Photo Gallery">
+        <h2>Our Photography Gallery</h2>
+        <p>Click on an image to view it in full size!</p>
+
+        <!-- Placeholder for dynamically generated gallery -->
+        <div id="photo-gallery"></div>
+        </section>
+
+    </div>
+
+    <div class = "content">
+    <!-- Interactive Form with Selections, Validation, and File Upload -->
+    <h1>Fill out what type of pictures you like, so we get to know more about you!</h1>
+
+<!-- Form to collect user input -->
+<form id="user-form">
+    <h2>Choose Your Options:</h2>
+    <label for="single photo">
+        <input type="checkbox" class="option-checkbox" value="single photo"> Single Photos
+    </label><br>
+
+    <label for="event photos">
+        <input type="checkbox" class="option-checkbox" value="event photos"> Event Photos (graduation, Wedding, Promotion ceremony, Retirement, etc...)
+    </label><br>
+
+    <label for="family photo">
+        <input type="checkbox" class="option-checkbox" value="family photo"> Family Photos
+    </label><br>
+
+    <h2>Enter Phone Number of your account:</h2>
+    <input type="text" id="phone-number" placeholder="Enter phone number (digits only)" required><br>
+
+    <h2>Upload a Text File:</h2>
+    <input type="file" id="file-upload" accept=".txt"><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Your Selections:</h2>
+<div id="selections-output"></div>
+
+<h2>File Contents:</h2>
+<div id="file-output"></div>
+
+</div>
+
+
+
+<!--Here is the Link to external Javascript file-->
+    <script src="proj7.js"></script>
+    <script src="proj5.js"></script>
+       
+	    <!-- Footer -->
+        <footer>
+            <p>Paz2Focus web page was created by Michael Paz.</p>
+            <p>&copy; 2025 Photography Website. All rights reserved.</p>
+        </footer>
+    
+	
+</body>
+</html>
