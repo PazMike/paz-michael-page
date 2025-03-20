@@ -1,8 +1,7 @@
 
-// Event listener for form submission
-document.getElementById('user-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form from submitting
 
+// Function to handle checkbox changes
+function updateSelections() {
     // 1. Handle user selections using checkboxes
     let selections = [];
 
@@ -26,13 +25,26 @@ document.getElementById('user-form').addEventListener('submit', function (event)
 
     // Display user selections on the screen
     const selectionsOutput = document.getElementById('selections-output');
-    selectionsOutput.innerHTML = `<p>You have selected: ${selections.join(', ')}</p>`;
+    if (selections.length > 0) {
+        selectionsOutput.innerHTML = `<p>You have selected: ${selections.join(', ')}</p>`;
+    } else {
+        selectionsOutput.innerHTML = `<p>No selections made yet.</p>`;
+    }
+}
 
-    // 2. Phone number validation using regular expression
-    const phoneNumber = document.getElementById('phone-number').value.trim();
+// Add event listeners for each checkbox to update the selections when checked or unchecked
+document.querySelectorAll('.option-checkbox').forEach(checkbox => {
+    checkbox.addEventListener('change', updateSelections);
+});
+
+// 2. Phone number validation using regular expression (immediate feedback)
+const phoneNumberInput = document.getElementById('phone-number');
+phoneNumberInput.addEventListener('input', function () {
+    const phoneNumber = phoneNumberInput.value.trim();
     const phoneRegex = /^\d+$/; // Only allow digits (no hyphens or parentheses)
     const phoneError = document.getElementById('phone-error'); // Error message element
 
+    // Validate phone number
     if (!phoneRegex.test(phoneNumber)) {
         // Show error message near the input if phone number is invalid
         if (!phoneError) {
@@ -42,7 +54,6 @@ document.getElementById('user-form').addEventListener('submit', function (event)
             errorElement.textContent = 'Please enter a valid phone number (only digits, no hyphens or parentheses).';
             document.getElementById('user-form').appendChild(errorElement);
         }
-        return; // Stop form submission if phone number is invalid
     } else {
         // Remove error message if phone number is valid
         if (phoneError) {
@@ -50,12 +61,22 @@ document.getElementById('user-form').addEventListener('submit', function (event)
         }
     }
 
-    // 3. Handle file upload (display contents of text file)
-    const fileInput = document.getElementById('file-upload');
-    const file = fileInput.files[0];
-    if (file) {
-        const fileError = document.getElementById('file-error'); // File type error message element
+    // Optionally, display the phone number in real time (for example in the #phone-output div)
+    const phoneOutput = document.getElementById('phone-output');
+    if (phoneNumber) {
+        phoneOutput.innerHTML = `<p>Phone number entered: ${phoneNumber}</p>`;
+    } else {
+        phoneOutput.innerHTML = '';
+    }
+});
 
+// 3. Handle file upload (display contents of text file)
+const fileInput = document.getElementById('file-upload');
+fileInput.addEventListener('change', function () {
+    const file = fileInput.files[0];
+    const fileError = document.getElementById('file-error'); // File type error message element
+
+    if (file) {
         // Only process text files
         if (file.type !== 'text/plain') {
             if (!fileError) {
