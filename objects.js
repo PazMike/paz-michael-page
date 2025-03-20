@@ -6,7 +6,7 @@ class PhotographyTask {
     this.date = date; // Date of the photography session
     this.status = status; // Status of the task (pending, completed, canceled)
   }
-
+//
   // Method to mark the task as completed.
   markAsCompleted() {
     this.status = "completed";
