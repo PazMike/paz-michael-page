@@ -1,4 +1,5 @@
 
+
 // Array of image sources for different galleries (Page-based)
 const galleryData = {
     homePage: [
