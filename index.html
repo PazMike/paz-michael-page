@@ -23,6 +23,27 @@
       <h1>Paz2Focus</h1>
       <h1 id="header">Official website of Michael Paz's photography</h1>
 
+      <h1>Customizable Page Form</h1>
+      <form id="customizationForm">
+        <label for="bgColor">click a custom background Color:</label>
+        <input type="color" id="bgColor" name="bgColor" value="#ffffff" />
+
+        <label for="textColor">click a custom text Color:</label>
+        <input type="color" id="textColor" name="textColor" value="#000000" />
+
+        <label for="fontSize">Slide the bar to adjust font Size:</label>
+        <input
+          type="range"
+          id="fontSize"
+          name="fontSize"
+          min="10"
+          max="50"
+          value="16"
+        />
+
+        <button type="submit">Apply</button>
+      </form>
+
       <!-- Photo Gallery Section -->
       <section class="Photo Gallery">
         <h2>Our Photography Gallery</h2>
@@ -103,6 +124,7 @@
     </div>
 
     <!--Here is the Link to external Javascript file-->
+    <script src="proj9.js"></script>
     <script src="proj7.js"></script>
     <script src="proj5.js"></script>
     <script src="objects.js"></script>
