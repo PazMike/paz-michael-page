@@ -8,7 +8,6 @@ window.onload = function () {
   startTimer();
 };
 
-// Setup puzzle board with shuffled pieces
 function setupBoard() {
   const board = document.getElementById("puzzle-board");
   board.innerHTML = "";
@@ -45,7 +44,6 @@ function setupBoard() {
   updateTimerDisplay();
 }
 
-// Timer
 function startTimer() {
   clearInterval(interval);
   interval = setInterval(() => {
@@ -58,7 +56,6 @@ function updateTimerDisplay() {
   document.getElementById("timer").innerText = `Time: ${timer}s`;
 }
 
-// Drag functions
 let dragged;
 
 function dragStart(e) {
@@ -85,11 +82,9 @@ function dragLeave(e) {
 function dropPiece(e) {
   e.preventDefault();
   if (e.target === dragged) return;
-
   e.target.classList.remove("hovered");
   dragged.classList.remove("dragging");
 
-  // Swap nodes
   const board = document.getElementById("puzzle-board");
   let fromIndex = Array.from(board.children).indexOf(dragged);
   let toIndex = Array.from(board.children).indexOf(e.target);
@@ -102,23 +97,36 @@ function dropPiece(e) {
   checkPuzzle();
 }
 
-// Check if puzzle is solved
 function checkPuzzle() {
   const board = document.getElementById("puzzle-board");
   const pieces = Array.from(board.children);
-  const isSolved = pieces.every(
-    (piece, index) => parseInt(piece.dataset.index) === index
-  );
+  let isSolved = true;
+
+  pieces.forEach((piece, index) => {
+    if (parseInt(piece.dataset.index) !== index) {
+      isSolved = false;
+    } else {
+      piece.classList.add("snapped");
+    }
+  });
 
   if (isSolved) {
     clearInterval(interval);
     document.getElementById(
       "message"
     ).innerText = `🎉 Puzzle Completed in ${timer}s!`;
+  } else {
+    pieces.forEach((piece) => {
+      if (
+        parseInt(piece.dataset.index) !==
+        Array.from(board.children).indexOf(piece)
+      ) {
+        piece.classList.remove("snapped");
+      }
+    });
   }
 }
 
-// Reset game
 function resetGame() {
   clearInterval(interval);
   setupBoard();
