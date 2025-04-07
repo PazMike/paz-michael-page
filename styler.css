@@ -1,27 +1,19 @@
 /* External CSS Styles */
 
 @media screen and (max-width: 480px) {
-    body {
-      background-color:lightblue;
-    }
+  body {
+    background-color: lightblue;
+  }
 }
 /* The above code would turn the background lightblue for anyone using a device larger than 480px wide. */
 
 /* Make the nav bar responsive */
 @media screen and (max-width: 600px) {
-    nav a {
-      float: none; 
-      width: 100%;
-      text-align: center;
-    }
-}
-
-/*  Styling the Error Message   */
-
-.error-message {
-  color: red;
-  font-size: 12px;
-  margin-top: 5px;
+  nav a {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 /* Scope the styles to only apply to elements inside #game-container */
@@ -133,13 +125,21 @@
   color: #333;
 }
 
+/*  Styling the Error Message   */
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
 
 /* Gallery and Image Overlay Styles */
 
 /* Overlay container styles */
 
 /* Previous and Next Buttons for Slideshow */
-.prev-overlay, .next-overlay {
+.prev-overlay,
+.next-overlay {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -161,7 +161,8 @@
   right: 10px;
 }
 
-.prev-overlay:hover, .next-overlay:hover {
+.prev-overlay:hover,
+.next-overlay:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -241,9 +242,6 @@
   transform: scale(1.1);
 }
 
-
-
-
 /* Stack links vertically on smaller screens */
 
 /* Styling for the response box: So that the user can see where the message is without being clutered*/
@@ -261,128 +259,128 @@
   color: #333;
 }
 
-
-
 /* Styling for navigation that will appear on every page.*/
 nav {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  nav a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-  }
-  
-  nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  nav a.active {
-    background-color: #1bb8fc;
-  }
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+nav a.active {
+  background-color: #1bb8fc;
+}
 
 /* General styling for the body and header */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  nav a:hover {
-    color: #ff9800; /* Change to an accent color when hovered */
-  }
-  
-  /* Styling for the Contact Section */
-  .contact-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-section h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .contact-section p {
-    text-align: center;
-    font-size: 18px;
-    color: #555;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    font-size: 16px;
-    color: #333;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button.submit-btn {
-    width: 100%;
-    padding: 15px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  button.submit-btn:hover {
-    background-color: #ff9800;
-  }
-  
-  /* Additional contact info styling */
-  .contact-info {
-    margin-top: 30px;
-    font-size: 16px;
-    color: #555;
-  }
-  
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
-  /* Styling for the .content class */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #ff9800; /* Change to an accent color when hovered */
+}
+
+/* Styling for the Contact Section */
+.contact-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #333;
+}
+
+.contact-section p {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button.submit-btn:hover {
+  background-color: #ff9800;
+}
+
+/* Additional contact info styling */
+.contact-info {
+  margin-top: 30px;
+  font-size: 16px;
+  color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Styling for the .content class */
 /* General styling for the body and header */
 body {
   font-family: Arial, sans-serif;
