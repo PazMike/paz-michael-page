@@ -7,7 +7,7 @@ window.onload = function () {
   setupBoard();
   startTimer();
 };
-//update
+
 // Setup puzzle board with shuffled pieces
 function setupBoard() {
   const board = document.getElementById("puzzle-board");
