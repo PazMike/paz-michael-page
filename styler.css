@@ -24,6 +24,115 @@
   margin-top: 5px;
 }
 
+/* Scope the styles to only apply to elements inside #game-container */
+#game-container {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: #f1f1f1;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header styles inside game container */
+#game-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Controls styling */
+#game-container #controls {
+  margin-bottom: 10px;
+}
+
+#game-container #timer {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #333;
+}
+
+#game-container button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#game-container button:hover {
+  background-color: #45a049;
+}
+
+/* Puzzle board styles */
+#game-container #puzzle-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 5px;
+  background-color: #fff;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Piece styles */
+#game-container .piece {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #aaa;
+  background-image: url("images/cap.jpg"); /* replace with your image path */
+  background-size: 300px 300px;
+  cursor: grab;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+#game-container .piece.dragging {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+/* Dropzone styling */
+#game-container .dropzone {
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+}
+
+/* Hover effect on drop zone */
+#game-container .dropzone.hovered {
+  border-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+#game-container #message {
+  font-size: 20px;
+  color: green;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#game-container #message.success {
+  color: green;
+}
+
+/* Timer text styling */
+#game-container #timer {
+  font-size: 18px;
+  color: #333;
+}
+
 
 /* Gallery and Image Overlay Styles */
 
