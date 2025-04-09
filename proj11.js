@@ -1,4 +1,4 @@
-// Fetch API - Random Dog Image
+// Fetch API- Random Dog Image
 function getDogImage() {
   fetch("https://dog.ceo/api/breeds/image/random")
     .then((response) => {
