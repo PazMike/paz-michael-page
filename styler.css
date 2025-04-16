@@ -1,13 +1,13 @@
-/* External CSS Styles */
+/* ========== RESPONSIVE BREAKPOINTS ========== */
 
+/* Background color change for small screens */
 @media screen and (max-width: 480px) {
   body {
     background-color: lightblue;
   }
 }
-/* The above code would turn the background lightblue for anyone using a device larger than 480px wide. */
 
-/* Make the nav bar responsive */
+/* Stack nav links vertically on smaller devices */
 @media screen and (max-width: 600px) {
   nav a {
     float: none;
@@ -16,13 +16,13 @@
   }
 }
 
-/*GAME CSS styling */
+/* ========== PUZZLE GAME STYLES ========== */
+
 #game-container {
   font-family: "Arial", sans-serif;
   text-align: center;
   padding: 20px;
   background: #f1f1f1;
-  margin: 0;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,6 @@
   align-items: center;
 }
 
-/* Header styles inside game container */
 #game-container h1 {
   color: #333;
   margin-bottom: 20px;
@@ -39,6 +38,7 @@
   letter-spacing: 2px;
 }
 
+/* Grid layout for 3x3 puzzle */
 #puzzle-board {
   display: grid;
   grid-template-columns: repeat(3, 100px);
@@ -57,26 +57,26 @@
   width: 100px;
   height: 100px;
   border: 2px solid #aaa;
-  background-image: url("images/cap.jpg"); /* Replace with your image path */
+  background-image: url("images/cap.jpg");
   background-size: 300px 300px;
   cursor: grab;
   transition: transform 0.3s ease;
   border-radius: 5px;
 }
 
+/* Visual feedback during drag/drop */
 .piece.dragging {
   opacity: 0.5;
 }
-
 .piece.hovered {
   border: 2px dashed #00f;
 }
-
 .piece.snapped {
   cursor: default;
   pointer-events: none;
 }
 
+/* Message and timer display */
 #message,
 #game-container #timer {
   font-size: 18px;
@@ -84,6 +84,7 @@
   color: #333;
 }
 
+/* Reset button styling */
 #game-container button {
   padding: 10px 15px;
   font-size: 16px;
@@ -94,20 +95,58 @@
   cursor: pointer;
 }
 
-
-/*  Styling the Error Message   */
-
+/* ========== ERROR MESSAGE ========== */
 .error-message {
   color: red;
   font-size: 12px;
   margin-top: 5px;
 }
 
-/* Gallery and Image Overlay Styles */
+/* ========== GALLERY & OVERLAY STYLES ========== */
 
-/* Overlay container styles */
+/* Gallery grid */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
 
-/* Previous and Next Buttons for Slideshow */
+/* Each image in gallery */
+.gallery-image {
+  width: 30%;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.gallery-image:hover {
+  transform: scale(1.1);
+}
+
+/* Fullscreen overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Enlarged image inside overlay */
+.overlay-img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay navigation buttons */
 .prev-overlay,
 .next-overlay {
   position: absolute;
@@ -122,42 +161,18 @@
   border-radius: 50%;
   z-index: 1000;
 }
-
 .prev-overlay {
   left: 10px;
 }
-
 .next-overlay {
   right: 10px;
 }
-
 .prev-overlay:hover,
 .next-overlay:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-/* Overlay image styling */
-.overlay-img {
-  max-width: 90%;
-  max-height: 90%;
-  border: 5px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Close button styles */
+/* Close overlay button */
 .close-overlay {
   position: absolute;
   top: 10px;
@@ -169,12 +184,11 @@
   border: none;
   cursor: pointer;
 }
-
 .close-overlay:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Swap button styles */
+/* Swap button inside overlay */
 .swap-overlay {
   position: absolute;
   bottom: 10px;
@@ -187,34 +201,11 @@
   border: none;
   cursor: pointer;
 }
-
 .swap-overlay:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Gallery Styles */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 30px;
-}
-
-.gallery-image {
-  width: 30%;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.gallery-image:hover {
-  transform: scale(1.1);
-}
-
-/* Stack links vertically on smaller screens */
-
-/* Styling for the response box: So that the user can see where the message is without being clutered*/
+/* ========== RESPONSE BOX ========== */
 .response-box {
   background-color: #f2f2f2;
   border: 1px solid #ccc;
@@ -223,18 +214,16 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .response-box p {
   font-size: 16px;
   color: #333;
 }
 
-/* Styling for navigation that will appear on every page.*/
+/* ========== NAVIGATION ========== */
 nav {
   background-color: #333;
   overflow: hidden;
 }
-
 nav a {
   float: left;
   display: block;
@@ -242,44 +231,44 @@ nav a {
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
+  font-size: 18px;
 }
-
 nav a:hover {
   background-color: #ddd;
   color: black;
 }
-
 nav a.active {
   background-color: #1bb8fc;
 }
 
-/* General styling for the body and header */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
+/* ========== HEADER & FOOTER ========== */
 header {
   background-color: #333;
   color: white;
   padding: 20px 0;
   text-align: center;
 }
-
-nav a {
-  margin: 0 15px;
+footer {
+  background-color: #333;
   color: white;
-  text-decoration: none;
-  font-size: 18px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
 
-nav a:hover {
-  color: #ff9800; /* Change to an accent color when hovered */
+/* ========== CONTENT CONTAINER ========== */
+.content {
+  max-width: 800px;
+  width: 80%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  text-align: center;
 }
 
-/* Styling for the Contact Section */
+/* ========== CONTACT SECTION ========== */
 .contact-section {
   max-width: 800px;
   margin: 40px auto;
@@ -287,29 +276,26 @@ nav a:hover {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .contact-section h2 {
   text-align: center;
   color: #333;
 }
-
 .contact-section p {
   text-align: center;
   font-size: 18px;
   color: #555;
 }
 
+/* Form layout */
 .form-group {
   margin-bottom: 15px;
 }
-
 label {
   font-size: 16px;
   color: #333;
   display: block;
   margin-bottom: 5px;
 }
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -320,6 +306,7 @@ textarea {
   border-radius: 4px;
 }
 
+/* Submit button styling */
 button.submit-btn {
   width: 100%;
   padding: 15px;
@@ -330,51 +317,13 @@ button.submit-btn {
   cursor: pointer;
   font-size: 16px;
 }
-
 button.submit-btn:hover {
   background-color: #ff9800;
 }
 
-/* Additional contact info styling */
+/* Additional contact info */
 .contact-info {
   margin-top: 30px;
   font-size: 16px;
   color: #555;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* Styling for the .content class */
-/* General styling for the body and header */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-/* No need for flexbox here anymore */
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-/* General styling for .content */
-.content {
-  max-width: 800px; /* Limit width of content */
-  width: 80%; /* Set content width */
-  padding: 30px; /* Add padding around content */
-  background-color: white; /* White background */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for styling */
-  margin: 40px auto; /* Center the content horizontally and give top and bottom margin */
-  text-align: center; /* Center the text inside the content */
 }
