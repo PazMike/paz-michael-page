@@ -1,31 +1,35 @@
-/* Styling for Dog API */
+/* Base styles for the page */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  padding: 20px;
-  color: #333;
+  font-family: Arial, sans-serif;       /* Clean, readable font */
+  background-color: #f9f9f9;            /* Light gray background */
+  padding: 20px;                        /* Space around content */
+  color: #333;                          /* Dark gray text color */
 }
 
+/* Headings */
 h1 {
-  color: #60aef7;
+  color: #60aef7;                       /* Blue color for section titles */
 }
 
+/* Box styling for API content containers */
 .api-box {
-  border: 2px solid #64a8f6;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  border: 2px solid #64a8f6;            /* Light blue border */
+  background-color: #fff;               /* White background inside box */
+  padding: 15px;                        /* Space inside the box */
+  border-radius: 8px;                   /* Rounded corners */
+  margin-bottom: 20px;                  /* Space between boxes */
 }
 
+/* Styling for images (dog images) */
 img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 10px;
+  max-width: 100%;                      /* Makes image responsive */
+  height: auto;                         /* Maintain aspect ratio */
+  border-radius: 10px;                  /* Rounded edges on images */
+  margin-top: 10px;                     /* Space above the image */
 }
 
+/* Error message styling */
 .error {
-  color: red;
-  font-weight: bold;
+  color: red;                           /* Red text for errors */
+  font-weight: bold;                    /* Bold for visibility */
 }
